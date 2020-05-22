@@ -41,6 +41,8 @@ function isCorrect(btn){
         document.getElementById(btn.id).style.backgroundColor = "red";
         document.getElementById(btn.id).style.color = "white";
     }
+    document.getElementById("option1").disabled = true;
+    document.getElementById("option2").disabled = true;
 }
 
 //get the next question or end the game
@@ -69,6 +71,8 @@ function nextQuestion(btn){
             document.getElementById("restart").style.display = "initial";
         }
         button_clicked = null;
+        document.getElementById("option1").disabled = false;
+        document.getElementById("option2").disabled = false;
     }
 }
 
