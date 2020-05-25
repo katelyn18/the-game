@@ -10,6 +10,10 @@ var questions_array = [
     {question: "What color are apples?",
     option1: "(a) red/green",
     option2: "(b) orange",
+    answer: "option1"},
+    {question: "What color are oranges?",
+    option1: "(a) orange",
+    option2: "(b) pink",
     answer: "option1"}
 ];
 var score; //number of correct answers
@@ -21,8 +25,8 @@ function startGame(){
     score = 0;
     next_question = 0;
     document.getElementById("questions_placeholder").innerHTML = questions_array[ next_question ].question;
-    document.getElementById("option1").value = questions_array[ next_question ].option1;
-    document.getElementById("option2").value = questions_array[ next_question ].option2;
+    document.getElementById("option1").innerHTML = questions_array[ next_question ].option1;
+    document.getElementById("option2").innerHTML = questions_array[ next_question ].option2;
     document.getElementById("user_score").style.display="none";
     document.getElementById("restart").style.display = "none";
 }
@@ -58,8 +62,8 @@ function nextQuestion(btn){
             document.getElementById(button_clicked).style.backgroundColor = "white";
             document.getElementById(button_clicked).style.color = "black";
             document.getElementById("questions_placeholder").innerHTML = questions_array[ next_question ].question;
-            document.getElementById("option1").value = questions_array[ next_question ].option1;
-            document.getElementById("option2").value = questions_array[ next_question ].option2;
+            document.getElementById("option1").innerHTML = questions_array[ next_question ].option1;
+            document.getElementById("option2").innerHTML = questions_array[ next_question ].option2;
         }
         else{
             document.getElementById("questions_placeholder").innerHTML = "Thank you for playing :)";
